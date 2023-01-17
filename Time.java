@@ -1,35 +1,36 @@
-
 /*
-Online Java - IDE, Code Editor, Compiler
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextBook_Excercises;
 
-Online Java is a quick and easy tool that helps you to build, compile, test your programs online.
-*/
-
+/**
+ *
+ * @author C0530980
+ */
 public class Time
 {
     public static void main(String[] args) {
-        int time = 1012;
-        int time2 = 930;
+        int timeCurrent = 948;
+        int timeStart = 930;
         
-        int hour = time / 100;
-        int min = time % 100;
+        int hour = timeCurrent / 100;
+        int min = timeCurrent % 100;
         int sec = hour * 3600 + (min * 60);
         
-        int hour2 = time2 / 100;
-        int min2 = time2 % 100;
-        int sec2 = hour2 * 3600 + (min * 60);
+        int hour2 = timeStart / 100;
+        int min2 = timeStart % 100;
+        int sec2 = hour2 * 3600 + (min2 * 60);
         
         int selapsed = sec - sec2;
-        int helapsed = sec / 3600;
-        double melapsed = sec / 60;
-        int selapsedf = sec - melapsed % 10;
-        int telapsed = helapsed 
-        
+        int helapsed = selapsed / 3600;
+        int melapsed = selapsed / 60;
+        int selapsedf = selapsed - ((melapsed * 60) + (helapsed * 3600));
+ 
         int secsinMid = 43200 - sec;
         int secremain = 86400 - sec;
         float secf = sec;
         float Percentday = (secf / 86400) * 100;
-        
         
         System.out.println("Hours: " + hour);
         System.out.println("Minutes: " + min);
@@ -37,5 +38,6 @@ public class Time
         System.out.println("Seconds Since Midnight: " + secsinMid);
         System.out.println("Seconds Remaining in Day: " + secremain);
         System.out.println("Progress in Day: " + Percentday + "%");
+        System.out.println("Time Elapsed Since Starting Question: " + helapsed + " hours " + melapsed + " minutes " + selapsedf + " seconds.");
     }
 }
